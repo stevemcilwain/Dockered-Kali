@@ -117,8 +117,9 @@ RUN echo "<html><body><p>PHP INFO PAGE</p><br /><?php phpinfo(); ?></body></html
 # Update db for locate
 RUN updatedb
 
+# ZSH
+RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Indicate we want to expose ports 80 and 443
 EXPOSE 8080/tcp
 EXPOSE 22/tcp
-
-
